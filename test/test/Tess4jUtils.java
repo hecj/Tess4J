@@ -67,16 +67,14 @@ public class Tess4jUtils {
     }
 
     public static void main(String[] args) {
-        /*String path = "src/main/resources/image/text.png";
-        System.out.println(readChar(path));*/
-    	
-//        String ch = "/Users/hecj/eclipse-workspace/Tess4J/test/resources/test-data/eurotext.png";
-//        String ch = "/Users/hecj/Desktop/2.png";
-//        String ch = "/Users/hecj/Desktop/WechatIMG124.jpeg";
-//        String ch = "/Users/hecj/Desktop/WechatIMG126.jpeg";
-        String ch = "/Users/hecj/Desktop/123.jpeg";
-        String res = readChar(ch, "/Users/hecj/eclipse-workspace/Tess4J/tessdata", "eng");
-        System.out.println("解析结果:"+res);
+    	long time = System.currentTimeMillis();
+        String ch = "/Users/hecj/Desktop/test4/1.png";
+        String language = "fontyp";
+//        String language = "eng";
+        String tessdata = "/Users/hecj/eclipse-workspace/Tess4J/tessdata";
+        String res = readChar(ch, tessdata, language);
+        System.out.println("解析结果:\n\n"+res);
+        System.out.println("耗时:"+(System.currentTimeMillis()-time));
     }
 
 }
