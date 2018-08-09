@@ -15,7 +15,7 @@ import javax.imageio.ImageIO;
 public class ImageGrayscale {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException {
-		String dir = "/Users/hecj/Desktop/test6";
+		String dir = "/Users/hecj/Desktop/test10";
 		File dirFile = new File(dir);
 		File[] files = dirFile.listFiles();
 		for(File file : files) {
