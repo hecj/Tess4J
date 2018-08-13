@@ -68,10 +68,10 @@ public class Tess4jUtils {
 
     public static void main(String[] args) {
     	long time = System.currentTimeMillis();
-        String ch = "/Users/hecj/Desktop/test6/150410750.jpg";
+        String ch = "/Users/hecj/eclipse-workspace/Tess4J/素材/xylinklang/WechatIMG239.jpeg";
 //        String language = "fontyp";
 //        String language = "eng";
-        String language = "xylinkfont";
+        String language = "DejaVuSansMonoBold";
         String tessdata = "/Users/hecj/eclipse-workspace/Tess4J/tessdata";
         String res = readChar(ch, tessdata, language);
         System.out.println("解析结果:\n\n"+res);

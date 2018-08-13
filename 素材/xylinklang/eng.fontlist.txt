@@ -1,0 +1,40 @@
+Century Schoolbook L Bold
+Century Schoolbook L Bold Italic
+Century Schoolbook L Italic
+Century Schoolbook L Medium
+DejaVu Sans
+DejaVu Sans Bold
+DejaVu Sans Mono
+DejaVu Sans Mono Bold
+DejaVu Serif
+DejaVu Serif Bold
+Nimbus Mono L
+Nimbus Mono L Bold
+Nimbus Mono L Bold Oblique
+Nimbus Mono L Oblique
+Nimbus Roman No9 L
+Nimbus Roman No9 L Bold
+Nimbus Roman No9 L Bold Italic
+Nimbus Roman No9 L Italic
+Nimbus Sans L
+Nimbus Sans L Bold
+Nimbus Sans L Bold Condensed
+Nimbus Sans L Bold Italic
+Nimbus Sans L Bold Italic Condensed
+Nimbus Sans L Condensed
+Nimbus Sans L Italic
+Nimbus Sans L Italic Condensed
+Standard Symbols L
+URW Bookman L
+URW Bookman L Bold
+URW Bookman L Bold Italic
+URW Bookman L Italic
+URW Chancery L Medium Italic
+URW Gothic L Book
+URW Gothic L Book Oblique
+URW Gothic L Semi-Bold
+URW Gothic L Semi-Bold Oblique
+URW Palladio L Bold
+URW Palladio L Bold Italic
+URW Palladio L Italic
+URW Palladio L Medium
