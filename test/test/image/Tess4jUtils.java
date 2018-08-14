@@ -68,7 +68,7 @@ public class Tess4jUtils {
 
     public static void main(String[] args) {
     	long time = System.currentTimeMillis();
-        String ch = "/Users/hecj/Desktop/ocrdata/image/WechatIMG149.jpeg";
+        String ch = "/Users/hecj/Desktop/ocrdata/image/123.jpeg";
 //        String language = "fontyp";
 //        String language = "eng";
         String language = "DejaVuSansMonoBold";
