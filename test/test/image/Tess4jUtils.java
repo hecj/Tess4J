@@ -69,11 +69,11 @@ public class Tess4jUtils {
     public static void main(String[] args) {
     	long time = System.currentTimeMillis();
 //        String ch = "/Users/hecj/Desktop/car/quzao_1.jpeg";
-        String ch = "/Users/hecj/Desktop/car/quzao.jpeg";
+        String ch = "/Users/hecj/Desktop/ocrdata/20180830/data/ocr_src.jpeg";
 //        String ch = "/Users/hecj/Desktop/car/quzao_2.png";
 //        String ch = "/Users/hecj/Desktop/car/quzao_3.jpeg";
 //        String ch = "/Users/hecj/Desktop/car/quzao_4.jpeg";
-//        String language = "fontyp";
+//        String language = "DejaVuSansMonoBold";
 //        String language = "eng";
         String language = "xylinkfont";
         String tessdata = "/Users/hecj/eclipse-workspace/Tess4J/tessdata";
