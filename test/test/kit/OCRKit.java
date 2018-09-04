@@ -9,9 +9,7 @@ import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint;
 import org.opencv.core.Point;
 import org.opencv.core.Rect;
-import org.opencv.core.Scalar;
 import org.opencv.imgcodecs.Imgcodecs;
-import org.opencv.imgproc.Imgproc;
 
 import test.image.Tess4jUtils;
 
@@ -26,21 +24,23 @@ public class OCRKit {
 
 	public static void main(String[] args) {
 		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-		Mat src = Imgcodecs.imread("/Users/hecj/Desktop/n4.jpeg");
+		Mat src = Imgcodecs.imread("/Users/hecj/Desktop/n6.png");
 		Mat formatMat = imagePrepare.formatMatSize(src);
+		Imgcodecs.imwrite("/Users/hecj/Desktop/n6formatMat.png", formatMat);
 		src.release();
 		// 轮廓
 		Mat outlineMat = ImagePrepare.imageOutline(formatMat);
 		List<MatOfPoint> rectangleList = imagePrepare.findRegion(outlineMat);
+		System.out.println("轮廓个数:"+rectangleList.size());
+//		Imgproc.drawContours(formatMat, rectangleList, -1, new Scalar(0, 0, 255));
 		String text = ocrText(formatMat, rectangleList);
+		if(text == null || text.trim().length() == 0) {
+			text = ocr(formatMat);
+		}
 		System.out.println(text);
-
-//		String text = ocr(formatMat);
-//		System.out.println(text);
 	}
 
 	public static String ocrText(Mat formatMat, List<MatOfPoint> rectangleList) {
-		Imgproc.drawContours(formatMat, rectangleList, -1, new Scalar(0, 0, 255));
 		List<Mat> regionMatList = new ArrayList<Mat>();
 		// 截取特征目标
 		for (int i = 0; i < rectangleList.size(); i++) {
