@@ -15,6 +15,7 @@
  */
 package net.sourceforge.tess4j;
 
+import com.alibaba.fastjson.JSON;
 import com.sun.jna.Pointer;
 import com.sun.jna.StringArray;
 import com.sun.jna.ptr.PointerByReference;

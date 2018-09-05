@@ -10,6 +10,7 @@ import org.opencv.core.MatOfPoint;
 import org.opencv.core.Point;
 import org.opencv.core.Rect;
 import org.opencv.imgcodecs.Imgcodecs;
+import org.opencv.imgproc.Imgproc;
 
 import test.image.Tess4jUtils;
 
@@ -24,9 +25,9 @@ public class OCRKit {
 
 	public static void main(String[] args) {
 		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-		Mat src = Imgcodecs.imread("/Users/hecj/Desktop/n6.png");
+		Mat src = Imgcodecs.imread("/Users/hecj/Desktop/n9.png");
 		Mat formatMat = imagePrepare.formatMatSize(src);
-		Imgcodecs.imwrite("/Users/hecj/Desktop/n6formatMat.png", formatMat);
+		Imgcodecs.imwrite("/Users/hecj/Desktop/formatMat.png", formatMat);
 		src.release();
 		// 轮廓
 		Mat outlineMat = ImagePrepare.imageOutline(formatMat);
@@ -68,17 +69,18 @@ public class OCRKit {
 	public static String ocr(Mat src) {
 		Mat gray = imagePrepare.gray(src);
 		Mat threshold = imagePrepare.threshold(gray);
+		String thresholdFile = "/Users/hecj/Desktop/threshold.jpeg";
+		Imgcodecs.imwrite(thresholdFile, threshold);
 		// 中值腐蚀
-//		Mat medianBlur = new Mat();
-//	    Imgproc.medianBlur(threshold, medianBlur, 5);
-
+		Mat medianBlur = new Mat();
+	    Imgproc.medianBlur(threshold, medianBlur, 5);
 		Tess4jUtils tess4jUtils = new Tess4jUtils();
-		String fileName = "/Users/hecj/Desktop/1.jpeg";
-		Imgcodecs.imwrite(fileName, threshold);
+		String medianBlurFile = "/Users/hecj/Desktop/medianBlur.jpeg";
+		Imgcodecs.imwrite(medianBlurFile, threshold);
 		String language = "eng";
 //		String language = "xylinkfont";
 		String tessdata = "/Users/hecj/eclipse-workspace/Tess4J/tessdata";
-		String text = tess4jUtils.readChar(fileName, tessdata, language);
+		String text = tess4jUtils.readChar(medianBlurFile, tessdata, language);
 		String[] textList = text.split("[\n]");
 		String resultText = bestText(textList);
 		return resultText;
